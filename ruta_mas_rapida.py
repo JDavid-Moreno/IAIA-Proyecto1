@@ -41,10 +41,13 @@ class Frontier:
 
 
 class Problem:
-    def __init__(self):
+    def __init__(self, station_initial, station_goal, routes):
+        self.station_initial = station_initial
+        self.station_goal = station_goal
+        self.routes = routes
 
-    def is_goal(self):
-
+    def is_goal(self, state):
+        return state[0] == self.station_goal
 
     def result_actions(self):
 

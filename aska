@@ -1,0 +1,241 @@
+[
+  {
+    "troncal_corredor": "Caracas - Centro",
+    "letra": "A",
+    "color_zona": "Azul",
+    "rutas": ["A60", "A61", "A62", "Ruta Fácil 1", "Ruta Fácil 3", "Ruta Fácil 6", "Ruta Fácil 8"],
+    "estaciones": [
+      "Calle 72",
+      "Flores",
+      "Calle 57",
+      "Marly",
+      "Avenida 39",
+      "Calle 34",
+      "Calle 26",
+      "Calle 22",
+      "Avenida Jiménez"
+    ]
+  },
+  {
+    "troncal_corredor": "Autopista Norte",
+    "letra": "B",
+    "color_zona": "Verde",
+    "rutas": ["B10", "B11", "B12", "B13", "B16", "B18", "B23", "B26", "B27", "B28", "B46", "B72", "B74", "B75", "Ruta Fácil 8"],
+    "estaciones": [
+      "Terminal",
+      "Calle 187"
+      "Portal Norte",
+      "Toberín",
+      "Calle 161",
+      "Mazurén",
+      "Calle 146",
+      "Calle 142",
+      "Alcalá",
+      "Prado Veraniego",
+      "Calle 127",
+      "Pepe Sierra",
+      "Calle 106",
+      "Calle 100",
+      "Virrey",
+      "Calle 85",
+      "Héroes"
+    ]
+  },
+  {
+    "troncal_corredor": "Avenida Suba",
+    "letra": "C",
+    "color_zona": "Amarillo",
+    "rutas": ["C15", "C17", "C19", "C25", "C29", "C30", "C44", "C50", "C73", "C84", "Ruta Fácil 7"],
+    "estaciones": [
+      "Portal Suba",
+      "La Campiña",
+      "Suba - Transversal 91",
+      "21 Ángeles",
+      "Gratamira",
+      "Suba - Avenida Boyacá",
+      "Niza - Calle 127",
+      "Humedal Córdoba",
+      "Avenida Suba - Calle 116",
+      "Puente Largo",
+      "Suba - Calle 100",
+      "Suba - Calle 95",
+      "Rionegro",
+      "San Martín"
+    ]
+  },
+  {
+    "troncal_corredor": "Calle 80",
+    "letra": "D",
+    "color_zona": "Morado",
+    "rutas": ["D10", "D20", "D21", "D22", "D24", "D81", "Ruta Fácil 6"],
+    "estaciones": [
+      "Portal de la 80",
+      "Quirigua",
+      "Carrera 90",
+      "Avenida Cali",
+      "Granja - Carrera 77",
+      "Minuto de Dios",
+      "Boyaca",
+      "Las Ferias",
+      "Avenida 68",
+      "Carrera 53",
+      "Carrera 47",
+      "Escuela Militar",
+      "Polo"
+    ]
+  },
+  {
+    "troncal_corredor": "NQS Central",
+    "letra": "E",
+    "color_zona": "Naranja",
+    "rutas": ["E32", "E42", "Ruta Fácil 4", "Ruta Fácil 7"],
+    "estaciones": [
+      "La Castellana",
+      "NQS Calle 75 - Zona M",
+      "7 de Agosto",
+      "Movistar Arena",
+      "Campín - Universidad Antonio Nariño",
+      "Universidad Nacional",
+      "Avenida El Dorado",
+      "CAD",
+      "Paloquemao",
+      "Ricaurte"
+    ]
+  },
+  {
+    "troncal_corredor": "Avenida de las Américas",
+    "letra": "F",
+    "color_zona": "Rojo",
+    "rutas": ["F14", "F19", "F23", "F26", "F28", "F29", "F32", "F51", "F60", "F61", "F62", "F63", "Ruta Fácil 5"],
+    "estaciones": [
+      "Tibanica - Primavera",
+      "Los Laureles",
+      "Islandia",
+      "Portal Américas",
+      "Biblioteca Tintal",
+      "Transversal 86",
+      "Banderas",
+      "Mandalay",
+      "Avenida Américas - Avenida Boyacá",
+      "Marsella",
+      "Pradera",
+      "Distrito Grafiti",
+      "Puente Aranda",
+      "Carrera 43",
+      "Zona Industrial",
+      "CDS - Carrera 32",
+      "Ricaurte"
+      "San Façon - Carrera 22",
+      "De La Sabana",
+      "AV Jimenez"
+    ]
+  },
+  {
+    "troncal_corredor": "NQS Sur / Soacha",
+    "letra": "G",
+    "color_zona": "Azul Claro",
+    "rutas": ["G11", "G12", "G22", "G30", "G41", "G42", "G43", "G44", "G46", "G47", "G52", "G71", "G81", "Ruta Fácil 4"],
+    "estaciones": [
+      "Comuneros",
+      "Santa Isabel",
+      "Calle 30 Sur",
+      "Calle 38A Sur",
+      "General Santander",
+      "Alquería",
+      "Venecia",
+      "Sevillana",
+      "Madelena",
+      "Perdomo",
+      "Portal Sur",
+      "Bosa",
+      "La Despensa",
+      "León XIII",
+      "Terreros - Hospital Cardiovascular",
+      "San Mateo"
+    ]
+  },
+  {
+    "troncal_corredor": "Caracas Sur",
+    "letra": "H",
+    "color_zona": "Naranja Oscuro",
+    "rutas": ["H13", "H15", "H17", "H20", "H21", "H27", "H54", "H72", "H73", "H75", "H83", "Ruta Fácil 3"],
+    "estaciones": [
+      "Hortúa",
+      "Nariño",
+      "Fucha",
+      "Restrepo",
+      "Olaya",
+      "Quiroga",
+      "Calle 40 Sur",
+      "Santa Lucía",
+      "Socorro",
+      "Consuelo",
+      "Molinos",
+      "Danubio",
+      "Portal Usme"
+      "Biblioteca",
+      "Parque",
+      "Portal Tunal",
+    ]
+  },
+  {
+    "troncal_corredor": "Eje Ambiental",
+    "letra": "J",
+    "color_zona": "Vinotinto",
+    "rutas": ["J23", "J24", "J74", "J76"],
+    "estaciones": [
+      "San Victorino",
+      "Museo del Oro",
+      "Las Aguas - Centro Colombo Americano",
+      "Universidades"
+    ]
+  },
+  {
+    "troncal_corredor": "Avenida El Dorado",
+    "letra": "K",
+    "color_zona": "Beige",
+    "rutas": ["K10", "K16", "K23", "K43", "K54", "K86", "Ruta Fácil 1"],
+    "estaciones": [
+      "Portal El Dorado",
+      "Modelia",
+      "Normandía",
+      "Avenida Rojas",
+      "El Tiempo",
+      "Salitre - El Greco",
+      "CAN",
+      "Gobernación",
+      "Quinta Paredes",
+      "Corferias",
+      "Ciudad Universitaria - Lotería de Bogotá",
+      "Concejo de Bogotá",
+      "Centro Memoria",
+      "Universidades",
+    ]
+  },
+  {
+    "troncal_corredor": "Carrera Décima",
+    "letra": "L",
+    "color_zona": "Turquesa",
+    "rutas": ["L10", "L18", "L25", "L41", "L47", "L81", "L82", "Ruta Fácil 2"],
+    "estaciones": [
+      "San Diego",
+      "Las Nieves",
+      "San Victorino",
+      "Bicentenario",
+      "San Bernardo",
+      "Policarpa",
+      "Ciudad Jardín - Universidad Antonio Nariño",
+      "Avenida 1 de Mayo",
+      "Country Sur",
+      "Portal 20 de Julio"
+    ]
+  },
+  {
+    "AK_7": "Carrera Decima",
+    "letra": "M"
+    "Color_zona": "Turquesa",
+    "Rutas": ["M47", "M51", "M83"]
+    "estaciones": [
+        "Museo Nacional"
+    ]
+]

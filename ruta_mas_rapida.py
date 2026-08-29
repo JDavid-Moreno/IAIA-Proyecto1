@@ -1,5 +1,8 @@
 import heapq
 
+from pyatspi import state
+
+
 class Node:
     def __init__(self, state, parent=None, action=None, cost=0):
         self.state = state
@@ -41,15 +44,36 @@ class Frontier:
 
 
 class Problem:
-    def __init__(self, station_initial, station_goal, routes):
+    def __init__(self, station_initial, station_goal, routes, routes_by_station):
         self.station_initial = station_initial
         self.station_goal = station_goal
         self.routes = routes
+        self.routes_by_station = routes_by_station
 
     def is_goal(self, state):
         return state[0] == self.station_goal
 
-    def result_actions(self):
+    def result_actions(self, state):
+        station, current_route = state
+        new_states = []
+
+        if current_route is None:
+            for i in self.routes_by_station[station]:
+                new_state = (station, i)
+                new_states.append(new_state)
+        else:
+            estaciones_ruta = self.routes[current_route]["estaciones"]
+            indice = estaciones_ruta.index(station)
+
+            if indice + 1 < len(estaciones_ruta):
+                siguiente_estacion = estaciones_ruta[indice + 1]
+                new_state = (siguiente_estacion, current_route)
+                new_states.append(new_state)
+
+            new_state = (station, None)
+            new_states.append(new_state)
+
+        return new_states
 
 
     def action_cost(self):

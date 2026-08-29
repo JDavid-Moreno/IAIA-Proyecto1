@@ -1,0 +1,118 @@
+[
+  {
+    "ruta": "B28",
+    "origen": "Portal Américas",
+    "destino": "Portal Norte",
+    "paradas": [
+      "Portal Américas",
+      "Biblioteca Tintal",
+      "Banderas",
+      "Marsella",
+      "Zona Industrial",
+      "CDS - Carrera 32",
+      "La Castellana",
+      "Calle 106",
+      "Pepe Sierra",
+      "Prado Veraniego",
+      "Calle 146",
+      "Calle 161",
+      "Portal Norte"
+    ]
+  },
+  {
+    "ruta": "F28",
+    "origen": "Portal Norte",
+    "destino": "Portal Américas",
+    "paradas": [
+      "Portal Norte",
+      "Calle 161",
+      "Calle 146",
+      "Prado Veraniego",
+      "Pepe Sierra",
+      "Calle 106",
+      "La Castellana",
+      "CDS - Carrera 32",
+      "Zona Industrial",
+      "Marsella",
+      "Banderas",
+      "Biblioteca Tintal",
+      "Portal Américas"
+    ]
+  },
+  {
+    "ruta": "E32",
+    "origen": "Portal Américas",
+    "destino": "NQS Calle 75 - Zona M",
+    "paradas": [
+      "Portal Américas",
+      "Banderas",
+      "CAD",
+      "7 de Agosto",
+      "NQS Calle 75 - Zona M"
+    ]
+  },
+  {
+    "ruta": "B12",
+    "origen": "Portal Sur",
+    "destino": "Portal Norte",
+    "paradas": [
+      "Portal Sur",
+      "Perdomo",
+      "General Santander",
+      "Comuneros",
+      "Ricaurte",
+      "Avenida El Dorado",
+      "Universidad Nacional",
+      "Movistar Arena",
+      "NQS Calle 75 - Zona M",
+      "La Castellana",
+      "Calle 100",
+      "Calle 127",
+      "Prado Veraniego",
+      "Calle 142",
+      "Toberín",
+      "Portal Norte"
+    ]
+  },
+  {
+    "ruta": "B26",
+    "origen": "Portal Américas",
+    "destino": "Alcalá",
+    "paradas": [
+      "Portal Américas",
+      "Biblioteca Tintal",
+      "Transversal 86",
+      "Banderas",
+      "Mandalay",
+      "Avenida Américas - Avenida Boyacá",
+      "Héroes",
+      "Calle 85",
+      "Virrey",
+      "Calle 100",
+      "Calle 127",
+      "Alcalá"
+    ]
+  },
+  {
+    "ruta": "B10",
+    "origen": "Portal de la 80",
+    "destino": "Portal Norte",
+    "paradas": [
+      "Portal de la 80",
+      "Carrera 90",
+      "Avenida Cali",
+      "Granja - Carrera 77",
+      "Boyaca",
+      "Avenida 68",
+      "Carrera 53",
+      "Carrera 47",
+      "Calle 85",
+      "Calle 100",
+      "Alcalá",
+      "Calle 146",
+      "Mazurén",
+      "Toberín",
+      "Portal Norte"
+    ]
+  }
+]

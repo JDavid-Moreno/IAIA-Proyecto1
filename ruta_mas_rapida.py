@@ -1,7 +1,5 @@
 import heapq
 
-from pyatspi import state
-
 
 class Node:
     def __init__(self, state, parent=None, action=None, cost=0):
@@ -58,16 +56,16 @@ class Problem:
         new_states = []
 
         if current_route is None:
-            for i in self.routes_by_station[station]:
-                new_state = (station, i)
+            for route_id in self.routes_by_station[station]:
+                new_state = (station, route_id)
                 new_states.append(new_state)
         else:
-            estaciones_ruta = self.routes[current_route]["estaciones"]
-            indice = estaciones_ruta.index(station)
+            route_stations = self.routes[current_route]["stations"]
+            index = route_stations.index(station)
 
-            if indice + 1 < len(estaciones_ruta):
-                siguiente_estacion = estaciones_ruta[indice + 1]
-                new_state = (siguiente_estacion, current_route)
+            if index + 1 < len(route_stations):
+                next_station     = route_stations[index + 1]
+                new_state = (next_station, current_route)
                 new_states.append(new_state)
 
             new_state = (station, None)

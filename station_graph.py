@@ -1,6 +1,6 @@
 import heapq
 
-estaciones_por_corredor = {
+stations_by_corridor = {
     "A": [
         "Calle 72", "Flores", "Calle 57", "Marly", "Avenida 39",
         "Calle 34", "Calle 26", "Calle 22", "Avenida Jiménez",
@@ -69,19 +69,19 @@ estaciones_por_corredor = {
     ],
 }
 
-conexiones_entre_troncales = [
-    ("Héroes", "Polo"),                          # B - D
-    ("Calle 72", "Polo"),                        # A - D
-    ("NQS Calle 75 - Zona M", "Polo"),           # E - D
-    ("NQS Calle 75 - Zona M", "Escuela Militar"),  # E - D (conecta con ambas)
-    ("NQS Calle 75 - Zona M", "San Martín"),     # (E) - C
-    ("Calle 100", "La Castellana"),              # B - E
-    ("Avenida El Dorado", "Ciudad Universitaria - Lotería de Bogotá"),  # E - K
-    ("Avenida Jiménez", "Hortúa"),                # A - H
-    ("Avenida Jiménez", "Museo del Oro"),         # J - H (via Av. Jiménez)
-    ("Museo Nacional", "Centro Memoria"),          # M - K
-    ("Calle 26", "Centro Memoria"),               # A - K
-    ("Ricaurte", "Comuneros"),                     # E - G
+inter_corridor_connections = [
+    ("Héroes", "Polo"),
+    ("Calle 72", "Polo"),
+    ("NQS Calle 75 - Zona M", "Polo"),
+    ("NQS Calle 75 - Zona M", "Escuela Militar"),
+    ("NQS Calle 75 - Zona M", "San Martín"),
+    ("Calle 100", "La Castellana"),
+    ("Avenida El Dorado", "Ciudad Universitaria - Lotería de Bogotá"), 
+    ("Avenida Jiménez", "Hortúa"),
+    ("Avenida Jiménez", "Museo del Oro"),
+    ("Museo Nacional", "Centro Memoria"),
+    ("Calle 26", "Centro Memoria"),
+    ("Ricaurte", "Comuneros"),
 ]
 
 class Graph:
@@ -114,18 +114,18 @@ class Graph:
         return distances
 
 
-PESO_ARISTA = 2
+EDGE_WEIGHT = 2
 
 
 def build_graph():
     graph = Graph()
 
-    for corredor, estaciones in estaciones_por_corredor.items():
-        for i in range(len(estaciones) - 1):
-            graph.add_edge(estaciones[i], estaciones[i + 1], PESO_ARISTA)
+    for corridor, stations in stations_by_corridor.items():
+        for i in range(len(stations) - 1):
+            graph.add_edge(stations[i], stations[i + 1], EDGE_WEIGHT)
 
-    for a, b in conexiones_entre_troncales:
-        graph.add_edge(a, b, PESO_ARISTA)
+    for a, b in inter_corridor_connections:
+        graph.add_edge(a, b, EDGE_WEIGHT)
 
     return graph
 

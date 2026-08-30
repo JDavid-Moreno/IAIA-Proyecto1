@@ -1,4 +1,10 @@
+from red_datos import rutas, construir_rutas_por_estacion
+from station_graph import graph
 import heapq
+
+TRAVEL_TIME = 2      # minutos estimados entre estaciones consecutivas
+DWELL_TIME = 2        # minutos de parada al llegar a una estación
+TRANSFER_TIME = 5     # minutos de penalización por transbordo
 
 
 class Node:
@@ -42,11 +48,13 @@ class Frontier:
 
 
 class Problem:
-    def __init__(self, station_initial, station_goal, routes, routes_by_station):
+    def __init__(self, station_initial, station_goal, routes, graph):
         self.station_initial = station_initial
         self.station_goal = station_goal
         self.routes = routes
-        self.routes_by_station = routes_by_station
+        self.routes_by_station = construir_rutas_por_estacion(routes)
+        self.initial_state = (station_initial, None)
+        self.distances_to_goal = graph.shortest_distances_from(station_goal)
 
     def is_goal(self, state):
         return state[0] == self.station_goal
@@ -64,7 +72,7 @@ class Problem:
             index = route_stations.index(station)
 
             if index + 1 < len(route_stations):
-                next_station     = route_stations[index + 1]
+                next_station = route_stations[index + 1]
                 new_state = (next_station, current_route)
                 new_states.append(new_state)
 
@@ -73,14 +81,27 @@ class Problem:
 
         return new_states
 
+    def action_cost(self, state, action, state_1):
+        station, route = state
+        station_1, route_1 = state_1
 
-    def action_cost(self):
+        if route is None:
+            return 0  # abordar
 
+        if route_1 is None:
+            if station == self.station_goal:
+                return 0
+            return TRANSFER_TIME  # bajarse/transbordar
 
-    def heuristic(self):
+        return TRAVEL_TIME + DWELL_TIME  # avanzar
+
+    def heuristic(self, state):
+        station = state[0]
+        return self.distances_to_goal.get(station, 0)
 
 
 FAIL = Node(None)
+
 
 def expand(problem, node):
     state = node.state
@@ -93,6 +114,7 @@ def expand(problem, node):
         expansion.append(node_1)
 
     return expansion
+
 
 def best_first_search(problem, evaluation_function):
     root_node = Node(problem.initial_state, None, None, 0)
@@ -109,11 +131,12 @@ def best_first_search(problem, evaluation_function):
             frontier.add(neighbor)
     return FAIL
 
+
 def path_actions(node):
     nodes = []
     while True:
         nodes.append(node)
-        if node.parent == None:
+        if node.parent is None:
             break
         node = node.parent
 
@@ -127,20 +150,28 @@ def path_actions(node):
     return actions
 
 
-problem = Problem()
+def mostrar_resultado(problem, solution):
+    for i in range(1, len(solution)):
+        prev_station, prev_route = solution[i - 1]
+        station, route = solution[i]
 
-resultado = best_first_search(problem, lambda node: node.cost + problem.heuristic())
-
-solution = path_actions(resultado)
-solution_visual =
-print(solution_visual)
-
-
-
-
-
-
-
+        if prev_route is None and route is not None:
+            # se acaba de abordar una ruta
+            print(f"Tomar: {route}")
+        elif prev_route is not None and route is None:
+            # se bajó; si no es el destino final, es un transbordo
+            if station != problem.station_goal:
+                print(f"Transbordo en: {station}")
 
 
 
+problem = Problem("Portal Suba", "Portal Norte", rutas, graph)
+
+resultado = best_first_search(problem, lambda node: node.cost + problem.heuristic(node.state))
+
+if resultado is FAIL:
+    print("No se encontró una ruta.")
+else:
+    solution = path_actions(resultado)
+    mostrar_resultado(problem, solution)
+    print("Tiempo total estimado:", resultado.cost, "minutos")

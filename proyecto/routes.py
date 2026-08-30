@@ -216,7 +216,7 @@ routes = {
 }
 
 
-def build_routes_by_station(routes: dict) -> dict:
+def build_routes_by_station(routes: dict):
     routes_by_station: dict[str, list[str]] = {}
 
     for route_id, data in routes.items():

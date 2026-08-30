@@ -3,19 +3,19 @@ import heapq
 stations_by_corridor = {
     "A": [
         "Calle 72", "Flores", "Calle 57", "Marly", "Avenida 39",
-        "Calle 34", "Calle 26", "Calle 22", "Avenida Jiménez",
+        "Calle 34", "Calle 26", "Calle 22", "Avenida Jimenez",
     ],
     "B": [
-        "Terminal", "Calle 187", "Portal Norte", "Toberín", "Calle 161",
-        "Mazurén", "Calle 146", "Calle 142", "Alcalá", "Prado Veraniego",
+        "Terminal", "Calle 187", "Portal Norte", "Toberin", "Calle 161",
+        "Mazuren", "Calle 146", "Calle 142", "Alcala", "Prado Veraniego",
         "Calle 127", "Pepe Sierra", "Calle 106", "Calle 100", "Virrey",
-        "Calle 85", "Héroes",
+        "Calle 85", "Heroes",
     ],
     "C": [
-        "Portal Suba", "La Campiña", "Suba - Transversal 91", "21 Ángeles",
-        "Gratamira", "Suba - Avenida Boyacá", "Niza - Calle 127",
-        "Humedal Córdoba", "Avenida Suba - Calle 116", "Puente Largo",
-        "Suba - Calle 100", "Suba - Calle 95", "Rionegro", "San Martín",
+        "Portal Suba", "La Campina", "Suba - Transversal 91", "21 Angeles",
+        "Gratamira", "Suba - Avenida Boyaca", "Niza - Calle 127",
+        "Humedal Cordoba", "Avenida Suba - Calle 116", "Puente Largo",
+        "Suba - Calle 100", "Suba - Calle 95", "Rionegro", "San Martin",
     ],
     "D": [
         "Portal de la 80", "Quirigua", "Carrera 90", "Avenida Cali",
@@ -24,27 +24,27 @@ stations_by_corridor = {
     ],
     "E": [
         "La Castellana", "NQS Calle 75 - Zona M", "7 de Agosto",
-        "Movistar Arena", "Campín - Universidad Antonio Nariño",
+        "Movistar Arena", "Campin - Universidad Antonio Narino",
         "Universidad Nacional", "Avenida El Dorado", "CAD", "Paloquemao",
         "Ricaurte",
     ],
     "F": [
-        "Tibanica - Primavera", "Los Laureles", "Islandia", "Portal Américas",
+        "Tibanica - Primavera", "Los Laureles", "Islandia", "Portal Americas",
         "Biblioteca Tintal", "Transversal 86", "Banderas", "Mandalay",
-        "Avenida Américas - Avenida Boyacá", "Marsella", "Pradera",
+        "Avenida Americas - Avenida Boyaca", "Marsella", "Pradera",
         "Distrito Grafiti", "Puente Aranda", "Carrera 43", "Zona Industrial",
-        "CDS - Carrera 32", "Ricaurte", "San Façon - Carrera 22",
-        "De La Sabana", "Avenida Jiménez",
+        "CDS - Carrera 32", "Ricaurte", "San Facon - Carrera 22",
+        "De La Sabana", "Avenida Jimenez",
     ],
     "G": [
         "Comuneros", "Santa Isabel", "Calle 30 Sur", "Calle 38A Sur",
-        "General Santander", "Alquería", "Venecia", "Sevillana",
+        "General Santander", "Alqueria", "Venecia", "Sevillana",
         "Madelena", "Perdomo", "Portal Sur", "Bosa", "La Despensa",
-        "León XIII", "Terreros - Hospital Cardiovascular", "San Mateo",
+        "Leon XIII", "Terreros - Hospital Cardiovascular", "San Mateo",
     ],
     "H": [
-        "Hortúa", "Nariño", "Fucha", "Restrepo", "Olaya", "Quiroga",
-        "Calle 40 Sur", "Santa Lucía", "Socorro", "Consuelo", "Molinos",
+        "Hortua", "Narino", "Fucha", "Restrepo", "Olaya", "Quiroga",
+        "Calle 40 Sur", "Santa Lucia", "Socorro", "Consuelo", "Molinos",
         "Danubio", "Portal Usme", "Biblioteca", "Parque", "Portal Tunal",
     ],
     "J": [
@@ -52,16 +52,16 @@ stations_by_corridor = {
         "Las Aguas - Centro Colombo Americano", "Universidades",
     ],
     "K": [
-        "Portal El Dorado", "Modelia", "Normandía", "Avenida Rojas",
-        "El Tiempo", "Salitre - El Greco", "CAN", "Gobernación",
+        "Portal El Dorado", "Modelia", "Normandia", "Avenida Rojas",
+        "El Tiempo", "Salitre - El Greco", "CAN", "Gobernacion",
         "Quinta Paredes", "Corferias",
-        "Ciudad Universitaria - Lotería de Bogotá", "Concejo de Bogotá",
+        "Ciudad Universitaria - Loteria de Bogota", "Concejo de Bogota",
         "Centro Memoria", "Universidades",
     ],
     "L": [
         "San Diego", "Las Nieves", "San Victorino", "Bicentenario",
         "San Bernardo", "Policarpa",
-        "Ciudad Jardín - Universidad Antonio Nariño", "Avenida 1 de Mayo",
+        "Ciudad Jardin - Universidad Antonio Narino", "Avenida 1 de Mayo",
         "Country Sur", "Portal 20 de Julio",
     ],
     "M": [
@@ -70,19 +70,20 @@ stations_by_corridor = {
 }
 
 inter_corridor_connections = [
-    ("Héroes", "Polo"),
+    ("Heroes", "Polo"),
     ("Calle 72", "Polo"),
     ("NQS Calle 75 - Zona M", "Polo"),
     ("NQS Calle 75 - Zona M", "Escuela Militar"),
-    ("NQS Calle 75 - Zona M", "San Martín"),
+    ("NQS Calle 75 - Zona M", "San Martin"),
     ("Calle 100", "La Castellana"),
-    ("Avenida El Dorado", "Ciudad Universitaria - Lotería de Bogotá"), 
-    ("Avenida Jiménez", "Hortúa"),
-    ("Avenida Jiménez", "Museo del Oro"),
+    ("Avenida El Dorado", "Ciudad Universitaria - Loteria de Bogota"),
+    ("Avenida Jimenez", "Hortua"),
+    ("Avenida Jimenez", "Museo del Oro"),
     ("Museo Nacional", "Centro Memoria"),
     ("Calle 26", "Centro Memoria"),
     ("Ricaurte", "Comuneros"),
 ]
+
 
 class Graph:
     def __init__(self):
@@ -101,12 +102,15 @@ class Graph:
 
         while heap:
             dist, node = heapq.heappop(heap)
+
             if node in visited:
                 continue
+
             visited.add(node)
 
             for neighbor, weight in self.adjacency.get(node, []):
                 new_dist = dist + weight
+
                 if neighbor not in distances or new_dist < distances[neighbor]:
                     distances[neighbor] = new_dist
                     heapq.heappush(heap, (new_dist, neighbor))

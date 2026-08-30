@@ -1,11 +1,6 @@
-from red_datos import rutas, construir_rutas_por_estacion
+from routes import routes, build_routes_by_station
 from station_graph import graph
 import heapq
-
-TRAVEL_TIME = 2      # minutos estimados entre estaciones consecutivas
-DWELL_TIME = 2        # minutos de parada al llegar a una estación
-TRANSFER_TIME = 5     # minutos de penalización por transbordo
-
 
 class Node:
     def __init__(self, state, parent=None, action=None, cost=0):
@@ -24,40 +19,40 @@ class Node:
 class Frontier:
     def __init__(self, evaluation_function):
         self.evaluation_function = evaluation_function
-        self.frontierNode = []
-        self.cont = 0
+        self.frontier_node = []
+        self.count = 0
 
     def is_empty(self):
-        return len(self.frontierNode) == 0
+        return len(self.frontier_node) == 0
 
     def pop(self):
         if self.is_empty():
-            raise Exception("frontera vacia")
-        delete = heapq.heappop(self.frontierNode)
+            raise Exception("empty frontier")
+        delete = heapq.heappop(self.frontier_node)
         return delete[2]
 
     def top(self):
         if self.is_empty():
-            raise Exception("frontera vacia")
-        return self.frontierNode[0][2]
+            raise Exception("empty frontier")
+        return self.frontier_node[0][2]
 
     def add(self, node):
-        valor = self.evaluation_function(node)
-        heapq.heappush(self.frontierNode, (valor, self.cont, node))
-        self.cont += 1
+        value = self.evaluation_function(node)
+        heapq.heappush(self.frontier_node, (value, self.count, node))
+        self.count += 1
 
 
 class Problem:
-    def __init__(self, station_initial, station_goal, routes, graph):
-        self.station_initial = station_initial
-        self.station_goal = station_goal
+    def __init__(self, initial_station, goal_station, routes, graph):
+        self.initial_station = initial_station
+        self.goal_station = goal_station
         self.routes = routes
-        self.routes_by_station = construir_rutas_por_estacion(routes)
-        self.initial_state = (station_initial, None)
-        self.distances_to_goal = graph.shortest_distances_from(station_goal)
+        self.routes_by_station = build_routes_by_station(routes)
+        self.initial_state = (initial_station, None)
+        self.distances_to_goal = graph.shortest_distances_from(goal_station)
 
     def is_goal(self, state):
-        return state[0] == self.station_goal
+        return state[0] == self.goal_station
 
     def result_actions(self, state):
         station, current_route = state
@@ -86,14 +81,14 @@ class Problem:
         station_1, route_1 = state_1
 
         if route is None:
-            return 0  # abordar
+            return 0
 
         if route_1 is None:
-            if station == self.station_goal:
+            if station == self.goal_station:
                 return 0
-            return TRANSFER_TIME  # bajarse/transbordar
+            return TRANSFER_TIME
 
-        return TRAVEL_TIME + DWELL_TIME  # avanzar
+        return TRAVEL_TIME + DWELL_TIME
 
     def heuristic(self, state):
         station = state[0]
@@ -101,13 +96,16 @@ class Problem:
 
 
 FAIL = Node(None)
-
+TRAVEL_TIME = 3
+DWELL_TIME = 4
+TRANSFER_TIME = 5
 
 def expand(problem, node):
     state = node.state
     neighbors = problem.result_actions(state)
     neighbors = list(neighbors)
     expansion = []
+
     for neighbor in neighbors:
         cost = problem.action_cost(state, neighbor, neighbor) + node.cost
         node_1 = Node(neighbor, node, neighbor, cost)
@@ -120,15 +118,22 @@ def best_first_search(problem, evaluation_function):
     root_node = Node(problem.initial_state, None, None, 0)
     frontier = Frontier(evaluation_function)
     frontier.add(root_node)
+    reached = {}
 
     while not frontier.is_empty():
         current_node = frontier.pop()
+
+        if current_node.state in reached and reached[current_node.state] <= current_node.cost:
+            continue
+
+        reached[current_node.state] = current_node.cost
 
         if problem.is_goal(current_node.state):
             return current_node
 
         for neighbor in expand(problem, current_node):
             frontier.add(neighbor)
+
     return FAIL
 
 
@@ -139,39 +144,39 @@ def path_actions(node):
         if node.parent is None:
             break
         node = node.parent
-
     nodes.reverse()
-
     actions = []
+
     for node in nodes:
         action = node.state
         actions.append(action)
-
     return actions
 
 
-def mostrar_resultado(problem, solution):
+def show_result(problem, solution):
     for i in range(1, len(solution)):
-        prev_station, prev_route = solution[i - 1]
+        previous_station, previous_route = solution[i - 1]
         station, route = solution[i]
 
-        if prev_route is None and route is not None:
-            # se acaba de abordar una ruta
+        if previous_route is None and route is not None:
             print(f"Tomar: {route}")
-        elif prev_route is not None and route is None:
-            # se bajó; si no es el destino final, es un transbordo
-            if station != problem.station_goal:
+
+        elif previous_route is not None and route is None:
+            if station != problem.goal_station:
                 print(f"Transbordo en: {station}")
 
 
+problem = Problem("Portal ", "Portal Norte", routes, graph)
 
-problem = Problem("Portal Suba", "Portal Norte", rutas, graph)
+result = best_first_search(
+    problem,
+    lambda node: node.cost + problem.heuristic(node.state)
+)
 
-resultado = best_first_search(problem, lambda node: node.cost + problem.heuristic(node.state))
-
-if resultado is FAIL:
-    print("No se encontró una ruta.")
+if result is FAIL:
+    print("No se encontro ruta.")
 else:
-    solution = path_actions(resultado)
-    mostrar_resultado(problem, solution)
-    print("Tiempo total estimado:", resultado.cost, "minutos")
+    solution = path_actions(result)
+    show_result(problem, solution)
+    print()
+    print("Duración:", result.cost, "minutos")

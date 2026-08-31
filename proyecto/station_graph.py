@@ -140,7 +140,7 @@ class Graph:
         return distances
 
 
-EDGE_WEIGHT = 3
+EDGE_WEIGHT = 2
 
 edge_weight_overrides = {
     frozenset({"Calle 72", "Polo"}): 6,

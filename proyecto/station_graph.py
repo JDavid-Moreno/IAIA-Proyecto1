@@ -153,6 +153,7 @@ edge_weight_overrides = {
     frozenset({"Tygua - San Jose", "Bicentenario"}): 7,
     frozenset({"La Castellana", "NQS Calle 75 - Zona M"}): 4,
     frozenset({"Centro Memoria", "Universidades"}): 10,
+    frozenset({"Portal Americas", "Biblioteca Tintal"}): 6,
 }
 
 

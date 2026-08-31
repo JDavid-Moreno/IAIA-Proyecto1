@@ -166,7 +166,7 @@ def show_result(problem, solution):
                 print(f"Transbordo en: {station}")
 
 
-problem = Problem("Portal Norte", "Banderas", routes, graph)
+problem = Problem("Museo Nacional", "Portal Norte", routes, graph)
 
 result = best_first_search(
     problem,

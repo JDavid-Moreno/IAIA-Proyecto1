@@ -367,6 +367,156 @@ routes = {
             "Portal Americas",
         ],
     },
+    "D20": {
+        "name": "D20",
+        "stations": [
+            "Portal Usme", "Molinos", "Calle 40 Sur", "Quiroga", "Olaya",
+            "Restrepo", "Calle 22", "Calle 26", "Flores", "Polo",
+            "Avenida 68", "Las Ferias", "Boyaca", "Granja - Carrera 77",
+            "Quirigua", "Portal de la 80",
+        ],
+    },
+    "H20": {
+        "name": "H20",
+        "stations": [
+            "Portal de la 80", "Quirigua", "Granja - Carrera 77", "Boyaca",
+            "Las Ferias", "Avenida 68", "Polo", "Flores", "Calle 26",
+            "Calle 22", "Restrepo", "Olaya", "Quiroga", "Calle 40 Sur",
+            "Molinos", "Portal Usme",
+        ],
+    },
+
+    "D21": {
+        "name": "D21",
+        "stations": [
+            "Portal Tunal", "Santa Lucia", "Calle 40 Sur", "Fucha",
+            "Guatoque - Veraguas", "Ricaurte",
+            "Campin - Universidad Antonio Narino", "Movistar Arena",
+            "7 de Agosto", "Avenida 68", "Minuto de Dios",
+            "Granja - Carrera 77", "Avenida Cali", "Carrera 90",
+            "Portal de la 80",
+        ],
+    },
+    "T21": {
+        "name": "T21",
+        "stations": [
+            "Portal de la 80", "Carrera 90", "Avenida Cali",
+            "Granja - Carrera 77", "Minuto de Dios", "Avenida 68",
+            "7 de Agosto", "Movistar Arena",
+            "Campin - Universidad Antonio Narino", "Ricaurte",
+            "Guatoque - Veraguas", "Fucha", "Calle 40 Sur", "Santa Lucia",
+            "Portal Tunal",
+        ],
+    },
+
+    "D22": {
+        "name": "D22",
+        "stations": [
+            "Portal Sur", "Sevillana", "Venecia", "General Santander",
+            "Santa Isabel", "Paloquemao", "Avenida El Dorado",
+            "Universidad Nacional", "Avenida Chile",
+            "NQS Calle 75 - Zona M", "Carrera 47", "Avenida 68", "Boyaca",
+            "Minuto de Dios", "Granja - Carrera 77", "Portal de la 80",
+        ],
+    },
+    "G22": {
+        "name": "G22",
+        "stations": [
+            "Portal de la 80", "Granja - Carrera 77", "Minuto de Dios",
+            "Boyaca", "Avenida 68", "Carrera 47", "NQS Calle 75 - Zona M",
+            "Avenida Chile", "Universidad Nacional", "Avenida El Dorado",
+            "Paloquemao", "Santa Isabel", "General Santander", "Venecia",
+            "Sevillana", "Portal Sur",
+        ],
+    },
+
+    "B23": {
+        "name": "B23",
+        "stations": [
+            "Portal El Dorado", "Avenida Rojas", "El Tiempo",
+            "Salitre - El Greco", "CAN", "Gobernacion",
+            "Ciudad Universitaria - Loteria de Bogota", "Concejo de Bogota",
+            "Calle 26", "Avenida 39", "Marly", "Calle 57", "Calle 72",
+            "Calle 85", "Calle 127", "Prado Veraniego", "Alcala",
+        ],
+    },
+    "K23": {
+        "name": "K23",
+        "stations": [
+            "Alcala", "Prado Veraniego", "Calle 127", "Calle 85",
+            "Calle 72", "Calle 57", "Marly", "Avenida 39", "Calle 26",
+            "Concejo de Bogota", "Ciudad Universitaria - Loteria de Bogota",
+            "Gobernacion", "CAN", "Salitre - El Greco", "El Tiempo",
+            "Avenida Rojas", "Portal El Dorado",
+        ],
+    },
+
+    "F23": {
+        "name": "F23",
+        "stations": [
+            "Las Aguas - Centro Colombo Americano", "Museo del Oro",
+            "Avenida Jimenez", "De La Sabana", "San Facon - Carrera 22",
+            "Ricaurte", "Puente Aranda", "Pradera",
+            "Avenida Americas - Avenida Boyaca", "Banderas",
+            "Biblioteca Tintal", "Portal Americas",
+        ],
+    },
+    "J23": {
+        "name": "J23",
+        "stations": [
+            "Portal Americas", "Biblioteca Tintal", "Banderas",
+            "Avenida Americas - Avenida Boyaca", "Pradera", "Puente Aranda",
+            "Ricaurte", "San Facon - Carrera 22", "De La Sabana",
+            "Avenida Jimenez", "Museo del Oro",
+            "Las Aguas - Centro Colombo Americano",
+        ],
+    },
+
+    "D24": {
+        "name": "D24",
+        "stations": [
+            "Universidades", "Avenida 39", "Marly", "Calle 57", "Calle 72",
+            "Escuela Militar", "Carrera 47", "Minuto de Dios",
+            "Granja - Carrera 77", "Avenida Cali", "Carrera 90",
+            "Portal de la 80",
+        ],
+    },
+    "J24": {
+        "name": "J24",
+        "stations": [
+            "Portal de la 80", "Carrera 90", "Avenida Cali",
+            "Granja - Carrera 77", "Minuto de Dios", "Carrera 47",
+            "Escuela Militar", "Calle 72", "Calle 57", "Marly",
+            "Avenida 39", "Universidades",
+        ],
+    },
+
+    "C25": {
+        "name": "C25",
+        "stations": [
+            "Portal 20 de Julio", "Country Sur", "Avenida 1 de Mayo",
+            "San Bernardo", "Bicentenario", "Tygua - San Jose",
+            "Guatoque - Veraguas", "Ricaurte",
+            "Campin - Universidad Antonio Narino", "Movistar Arena",
+            "Avenida Chile", "NQS Calle 75 - Zona M", "San Martin",
+            "Suba - Calle 95", "Niza - Calle 127", "Suba - Avenida Boyaca",
+            "21 Angeles", "Suba - Transversal 91", "La Campina",
+            "Portal Suba",
+        ],
+    },
+    "L25": {
+        "name": "L25",
+        "stations": [
+            "Portal Suba", "La Campina", "Suba - Transversal 91",
+            "21 Angeles", "Suba - Avenida Boyaca", "Niza - Calle 127",
+            "Suba - Calle 95", "San Martin", "NQS Calle 75 - Zona M",
+            "Avenida Chile", "Movistar Arena",
+            "Campin - Universidad Antonio Narino", "Ricaurte",
+            "Guatoque - Veraguas", "Tygua - San Jose", "Bicentenario",
+            "San Bernardo", "Avenida 1 de Mayo", "Country Sur",
+            "Portal 20 de Julio",
+        ],
+    },
     "B26": {
         "name": "B26",
         "stations": [
@@ -376,6 +526,31 @@ routes = {
             "Alcala",
         ],
     },
+    "F26": {
+        "name": "F26",
+        "stations": [
+            "Portal de la 80", "Carrera 90", "Avenida Cali", "Granja - Carrera 77", "Boyaca",
+            "Avenida 68", "Carrera 53", "Carrera 47", "Calle 85", "Calle 100", "Alcala",
+            "Calle 146", "Mazuren", "Toberin", "Portal Norte",
+        ],
+    },
+    "B27": {
+        "name": "B27",
+        "stations": [
+            "Portal Tunal", "Calle 40 Sur", "Avenida Jimenez", "Calle 26",
+            "Heroes", "Calle 85", "Virrey", "Calle 100", "Toberin",
+            "Portal Norte",
+        ],
+    },
+    "T27": {
+        "name": "T27",
+        "stations": [
+            "Portal Norte", "Toberin", "Calle 100", "Virrey", "Calle 85",
+            "Heroes", "Calle 26", "Avenida Jimenez", "Calle 40 Sur",
+            "Portal Tunal",
+        ],
+    },
+
     "B28": {
         "name": "B28",
         "stations": [
@@ -394,45 +569,460 @@ routes = {
             "Portal Americas",
         ],
     },
+    "G30": {
+        "name": "G30",
+        "stations": [
+            "Portal Sur", "Venecia", "General Santander", "Calle 38A Sur",
+            "Santa Isabel", "CAD", "Universidad Nacional", "Movistar Arena",
+            "Rionegro", "Puente Largo", "Avenida Suba - Calle 116",
+            "Suba - Avenida Boyaca", "Suba - Transversal 91", "La Campina",
+            "Portal Suba",
+        ],
+    },
+    "C30": {
+        "name": "C30",
+        "stations": [
+            "Portal Suba", "La Campina", "Suba - Transversal 91",
+            "Suba - Avenida Boyaca", "Avenida Suba - Calle 116",
+            "Puente Largo", "Rionegro", "Movistar Arena",
+            "Universidad Nacional", "CAD", "Santa Isabel", "Calle 38A Sur",
+            "General Santander", "Venecia", "Portal Sur",
+        ],
+    },
     "E32": {
         "name": "E32",
         "stations": [
-            "Portal Americas", "Banderas", "CAD", "7 de Agosto",
+            "Portal Americas", "Transversal 86", "Banderas",
+            "Avenida Americas - Avenida Boyaca", "Puente Aranda",
+            "Zona Industrial", "CAD", "Avenida El Dorado",
+            "Universidad Nacional", "7 de Agosto", "Avenida Chile",
             "NQS Calle 75 - Zona M",
         ],
     },
-
-    "F26": {
-        "name": "F26",
+    "F32": {
+        "name": "F32",
         "stations": [
-            "Portal de la 80", "Carrera 90", "Avenida Cali", "Granja - Carrera 77", "Boyaca",
-            "Avenida 68", "Carrera 53", "Carrera 47", "Calle 85", "Calle 100", "Alcala",
-            "Calle 146", "Mazuren", "Toberin", "Portal Norte",
+            "NQS Calle 75 - Zona M", "Avenida Chile", "7 de Agosto",
+            "Universidad Nacional", "Avenida El Dorado", "CAD",
+            "Zona Industrial", "Puente Aranda",
+            "Avenida Americas - Avenida Boyaca", "Banderas",
+            "Transversal 86", "Portal Americas",
         ],
     },
-    "C25": {
-        "nombre": "C25",
+    "L41": {
+        "name": "L41",
         "stations": [
-            "Portal 20 de Julio", "Country Sur", "Av. Primero de Mayo",
-            "Estacion San Bernardo", "Bicentenario", "Tygua-San Jose",
-            "Guatoque - Veraguas", "Ricaurte", "Campin - UAN",
-            "Movistar Arena", "Avenida Chile", "NQS Calle 75",
-            "San Martin", "Suba - Calle 95", "Niza - Calle 127",
-            "Suba - Av. Boyaca", "21 Angeles", "Suba - Tv. 91",
-            "La Campina", "Portal Suba",
+            "San Mateo", "Terreros - Hospital Cardiovascular", "Bosa",
+            "Alqueria", "Calle 30 Sur", "Guatoque - Veraguas",
+            "Tygua - San Jose", "Bicentenario",
+        ],
+    },
+    "S41": {
+        "name": "S41",
+        "stations": [
+            "Bicentenario", "Tygua - San Jose", "Guatoque - Veraguas",
+            "Calle 30 Sur", "Alqueria", "Bosa",
+            "Terreros - Hospital Cardiovascular", "San Mateo",
         ],
     },
 
-    "L25": {
-        "nombre": "L25",
+    "E42": {
+        "name": "E42",
         "stations": [
-            "Portal Suba", "La Campina", "Suba - Tv. 91",
-            "21 Angeles", "Suba - Av. Boyaca", "Niza - Calle 127",
-            "Suba - Calle 95", "San Martin", "NQS Calle 75",
-            "Avenida Chile", "Movistar Arena", "Campin - UAN",
-            "Ricaurte", "Guatoque - Veraguas", "Tygua-San Jose",
-            "Bicentenario", "Estacion San Bernardo", "Av. Primero de Mayo",
-            "Country Sur", "Portal 20 de Julio",
+            "San Mateo", "Terreros - Hospital Cardiovascular", "Leon XIII",
+            "La Despensa", "Bosa", "Comuneros", "Paloquemao",
+            "Universidad Nacional", "Campin - Universidad Antonio Narino",
+            "7 de Agosto",
+        ],
+    },
+    "S42": {
+        "name": "S42",
+        "stations": [
+            "7 de Agosto", "Campin - Universidad Antonio Narino",
+            "Universidad Nacional", "Paloquemao", "Comuneros", "Bosa",
+            "La Despensa", "Leon XIII", "Terreros - Hospital Cardiovascular",
+            "San Mateo",
+        ],
+    },
+
+    "K43": {
+        "name": "K43",
+        "stations": [
+            "San Mateo", "Terreros - Hospital Cardiovascular", "Leon XIII",
+            "La Despensa", "Perdomo", "Calle 38A Sur", "Ricaurte",
+            "Avenida El Dorado", "Corferias", "Gobernacion",
+            "Salitre - El Greco", "El Tiempo", "Normandia", "Modelia",
+            "Portal El Dorado",
+        ],
+    },
+    "S43": {
+        "name": "S43",
+        "stations": [
+            "Portal El Dorado", "Modelia", "Normandia", "El Tiempo",
+            "Salitre - El Greco", "Gobernacion", "Corferias",
+            "Avenida El Dorado", "Ricaurte", "Calle 38A Sur", "Perdomo",
+            "La Despensa", "Leon XIII", "Terreros - Hospital Cardiovascular",
+            "San Mateo",
+        ],
+    },
+
+    "G45": {
+        "name": "G45",
+        "stations": [
+            "San Mateo", "Terreros - Hospital Cardiovascular", "Leon XIII",
+            "La Despensa", "Bosa", "Portal Sur",
+        ],
+    },
+    "S45": {
+        "name": "S45",
+        "stations": [
+            "Portal Sur", "Bosa", "La Despensa", "Leon XIII",
+            "Terreros - Hospital Cardiovascular", "San Mateo",
+        ],
+    },
+
+    "B46": {
+        "name": "B46",
+        "stations": [
+            "San Mateo", "Terreros - Hospital Cardiovascular", "Leon XIII",
+            "La Despensa", "Bosa", "Calle 100", "Alcala", "Toberin",
+            "Portal Norte",
+        ],
+    },
+    "S46": {
+        "name": "S46",
+        "stations": [
+            "Portal Norte", "Toberin", "Alcala", "Calle 100", "Bosa",
+            "La Despensa", "Leon XIII", "Terreros - Hospital Cardiovascular",
+            "San Mateo",
+        ],
+    },
+
+    "M47": {
+        "name": "M47",
+        "stations": [
+            "Portal Sur", "Perdomo", "Madelena", "Sevillana",
+            "Calle 38A Sur", "Comuneros", "Guatoque - Veraguas",
+            "Tygua - San Jose", "San Victorino", "Las Nieves", "San Diego",
+            "Museo Nacional",
+        ],
+    },
+    "G47": {
+        "name": "G47",
+        "stations": [
+            "Museo Nacional", "San Diego", "Las Nieves", "San Victorino",
+            "Tygua - San Jose", "Guatoque - Veraguas", "Comuneros",
+            "Calle 38A Sur", "Sevillana", "Madelena", "Perdomo", "Portal Sur",
+        ],
+    },
+
+    "E48": {
+        "name": "E48",
+        "stations": [
+            "San Mateo", "Terreros - Hospital Cardiovascular", "Leon XIII",
+            "La Despensa", "Bosa", "Sevillana", "Venecia",
+            "General Santander", "Santa Isabel", "Ricaurte", "CAD",
+        ],
+    },
+    "S48": {
+        "name": "S48",
+        "stations": [
+            "CAD", "Ricaurte", "Santa Isabel", "General Santander",
+            "Venecia", "Sevillana", "Bosa", "La Despensa", "Leon XIII",
+            "Terreros - Hospital Cardiovascular", "San Mateo",
+        ],
+    },
+    "B50": {
+        "name": "B50",
+        "stations": [
+            "Portal Suba", "La Campina", "Suba - Transversal 91",
+            "21 Angeles", "Avenida Suba - Calle 116", "Puente Largo",
+            "Rionegro", "Escuela Militar", "Heroes", "Calle 85", "Virrey",
+            "Calle 142", "Calle 161",
+        ],
+    },
+    "C50": {
+        "name": "C50",
+        "stations": [
+            "Calle 161", "Calle 142", "Virrey", "Calle 85", "Heroes",
+            "Escuela Militar", "Rionegro", "Puente Largo",
+            "Avenida Suba - Calle 116", "21 Angeles",
+            "Suba - Transversal 91", "La Campina", "Portal Suba",
+        ],
+    },
+
+    "M51": {
+        "name": "M51",
+        "stations": [
+            "Portal Americas", "Biblioteca Tintal", "Banderas", "Mandalay",
+            "Avenida Americas - Avenida Boyaca", "Marsella", "Pradera",
+            "Distrito Grafiti", "Ricaurte", "Avenida Jimenez", "Las Nieves",
+            "San Diego", "Museo Nacional",
+        ],
+    },
+    "F51": {
+        "name": "F51",
+        "stations": [
+            "Museo Nacional", "San Diego", "Las Nieves", "Avenida Jimenez",
+            "Ricaurte", "Distrito Grafiti", "Pradera", "Marsella",
+            "Avenida Americas - Avenida Boyaca", "Banderas",
+            "Biblioteca Tintal", "Portal Americas",
+        ],
+    },
+
+    "A52": {
+        "name": "A52",
+        "stations": [
+            "Portal Sur", "Perdomo", "Madelena", "Venecia", "Alqueria",
+            "General Santander", "Calle 30 Sur", "Santa Isabel", "Calle 72",
+            "Flores",
+        ],
+    },
+    "G52": {
+        "name": "G52",
+        "stations": [
+            "Flores", "Calle 72", "Santa Isabel", "Calle 30 Sur",
+            "General Santander", "Alqueria", "Venecia", "Madelena",
+            "Perdomo", "Portal Sur",
+        ],
+    },
+
+    "K53": {
+        "name": "K53",
+        "stations": [
+            "Portal Sur", "Madelena", "Venecia", "Alqueria",
+            "General Santander", "Santa Isabel", "CAD",
+            "Ciudad Universitaria - Loteria de Bogota", "Quinta Paredes",
+            "CAN", "Avenida Rojas", "Portal El Dorado",
+        ],
+    },
+    "G53": {
+        "name": "G53",
+        "stations": [
+            "Portal El Dorado", "Avenida Rojas", "CAN", "Quinta Paredes",
+            "Ciudad Universitaria - Loteria de Bogota", "CAD",
+            "Santa Isabel", "General Santander", "Alqueria", "Venecia",
+            "Madelena", "Portal Sur",
+        ],
+    },
+
+    "K54": {
+        "name": "K54",
+        "stations": [
+            "Portal Usme", "Danubio", "Molinos", "Calle 40 Sur", "Restrepo",
+            "Hortua", "Avenida Jimenez", "Concejo de Bogota",
+            "Ciudad Universitaria - Loteria de Bogota", "Corferias",
+            "Quinta Paredes", "CAN", "Salitre - El Greco", "El Tiempo",
+            "Avenida Rojas", "Modelia", "Portal El Dorado",
+        ],
+    },
+    "H54": {
+        "name": "H54",
+        "stations": [
+            "Portal El Dorado", "Modelia", "Avenida Rojas", "El Tiempo",
+            "Salitre - El Greco", "CAN", "Quinta Paredes", "Corferias",
+            "Ciudad Universitaria - Loteria de Bogota", "Concejo de Bogota",
+            "Avenida Jimenez", "Hortua", "Restrepo", "Calle 40 Sur",
+            "Molinos", "Danubio", "Portal Usme",
+        ],
+    },
+
+    "B55": {
+        "name": "B55",
+        "stations": [
+            "Portal de la 80", "Quirigua", "Avenida Cali",
+            "Granja - Carrera 77", "Minuto de Dios", "Las Ferias", "Polo",
+            "Heroes", "Virrey", "Calle 106", "Pepe Sierra",
+            "Prado Veraniego", "Calle 142", "Calle 161", "Calle 187",
+            "Terminal",
+        ],
+    },
+    "D55": {
+        "name": "D55",
+        "stations": [
+            "Terminal", "Calle 187", "Calle 161", "Calle 142",
+            "Prado Veraniego", "Pepe Sierra", "Calle 106", "Virrey",
+            "Heroes", "Polo", "Las Ferias", "Minuto de Dios",
+            "Granja - Carrera 77", "Avenida Cali", "Quirigua",
+            "Portal de la 80",
+        ],
+    },
+
+    "F60": {
+        "name": "F60",
+        "stations": [
+            "Calle 72", "Marly", "Avenida 39", "De La Sabana", "Ricaurte",
+            "Carrera 43", "Distrito Grafiti", "Banderas", "Transversal 86",
+            "Portal Americas",
+        ],
+    },
+    "A60": {
+        "name": "A60",
+        "stations": [
+            "Portal Americas", "Transversal 86", "Banderas",
+            "Distrito Grafiti", "Carrera 43", "Ricaurte", "De La Sabana",
+            "Avenida 39", "Marly", "Calle 72",
+        ],
+    },
+
+    "Z61": {
+        "name": "Z61",
+        "stations": [
+            "Polo", "Flores", "Calle 57", "Avenida 39", "Calle 22",
+            "De La Sabana", "Ricaurte", "CDS - Carrera 32", "Zona Industrial",
+            "Distrito Grafiti", "Marsella", "Islandia", "Los Laureles",
+            "Tibanica - Primavera",
+        ],
+    },
+    "A61": {
+        "name": "A61",
+        "stations": [
+            "Tibanica - Primavera", "Los Laureles", "Islandia", "Marsella",
+            "Distrito Grafiti", "Zona Industrial", "CDS - Carrera 32",
+            "Ricaurte", "De La Sabana", "Calle 22", "Avenida 39", "Calle 57",
+            "Flores", "Polo",
+        ],
+    },
+
+    "F63": {
+        "name": "F63",
+        "stations": [
+            "Tibanica - Primavera", "Los Laureles", "Islandia", "Banderas",
+            "Pradera",
+        ],
+    },
+    "Z63": {
+        "name": "Z63",
+        "stations": [
+            "Pradera", "Banderas", "Islandia", "Los Laureles",
+            "Tibanica - Primavera",
+        ],
+    },
+    "J70": {
+        "name": "J70",
+        "stations": [
+            "Portal Norte", "Toberin", "Mazuren", "Calle 146", "Calle 142",
+            "Alcala", "Prado Veraniego", "Calle 127", "CAD",
+            "Avenida Jimenez", "Museo del Oro",
+            "Las Aguas - Centro Colombo Americano",
+        ],
+    },
+    "B70": {
+        "name": "B70",
+        "stations": [
+            "Las Aguas - Centro Colombo Americano", "Museo del Oro",
+            "Avenida Jimenez", "CAD", "Calle 127", "Prado Veraniego",
+            "Alcala", "Calle 142", "Calle 146", "Mazuren", "Toberin",
+            "Portal Norte",
+        ],
+    },
+
+    "B72": {
+        "name": "B72",
+        "stations": [
+            "Portal Usme", "Molinos", "Socorro", "Olaya", "Fucha", "Narino",
+            "Tygua - San Jose", "Paloquemao", "Movistar Arena",
+            "Avenida Chile", "La Castellana", "Pepe Sierra", "Alcala",
+            "Mazuren", "Toberin",
+        ],
+    },
+    "H72": {
+        "name": "H72",
+        "stations": [
+            "Toberin", "Mazuren", "Alcala", "Pepe Sierra", "La Castellana",
+            "Avenida Chile", "Movistar Arena", "Paloquemao",
+            "Tygua - San Jose", "Narino", "Fucha", "Olaya", "Socorro",
+            "Molinos", "Portal Usme",
+        ],
+    },
+
+    "J73": {
+        "name": "J73",
+        "stations": [
+            "Portal Suba", "La Campina", "Suba - Transversal 91",
+            "Niza - Calle 127", "Puente Largo", "Suba - Calle 100",
+            "San Martin", "Ciudad Universitaria - Loteria de Bogota",
+            "Centro Memoria", "Universidades",
+        ],
+    },
+    "C73": {
+        "name": "C73",
+        "stations": [
+            "Universidades", "Centro Memoria",
+            "Ciudad Universitaria - Loteria de Bogota", "San Martin",
+            "Suba - Calle 100", "Puente Largo", "Niza - Calle 127",
+            "Suba - Transversal 91", "La Campina", "Portal Suba",
+        ],
+    },
+
+    "J74": {
+        "name": "J74",
+        "stations": [
+            "Portal Norte", "Toberin", "Mazuren", "Calle 146", "Calle 142",
+            "Prado Veraniego", "Virrey", "Heroes", "Calle 57", "Avenida 39",
+            "Calle 26", "Universidades",
+        ],
+    },
+    "B74": {
+        "name": "B74",
+        "stations": [
+            "Universidades", "Calle 26", "Avenida 39", "Calle 57", "Heroes",
+            "Virrey", "Prado Veraniego", "Calle 142", "Calle 146",
+            "Mazuren", "Toberin", "Portal Norte",
+        ],
+    },
+
+    "B75": {
+        "name": "B75",
+        "stations": [
+            "Portal Usme", "Danubio", "Molinos", "Consuelo", "Socorro",
+            "Santa Lucia", "Fucha", "Narino", "Hortua", "Avenida Jimenez",
+            "Avenida 39", "Marly", "Calle 57", "Calle 72", "Heroes",
+            "Calle 100", "Prado Veraniego", "Calle 142", "Calle 146",
+            "Toberin", "Portal Norte",
+        ],
+    },
+    "H75": {
+        "name": "H75",
+        "stations": [
+            "Portal Norte", "Toberin", "Calle 146", "Calle 142",
+            "Prado Veraniego", "Calle 100", "Heroes", "Calle 72", "Calle 57",
+            "Marly", "Avenida 39", "Avenida Jimenez", "Hortua", "Narino",
+            "Fucha", "Santa Lucia", "Socorro", "Consuelo", "Molinos",
+            "Danubio", "Portal Usme",
+        ],
+    },
+    "H76": {
+        "name": "H76",
+        "stations": [
+            "Universidades", "Avenida Jimenez", "Restrepo", "Calle 40 Sur",
+            "Santa Lucia", "Socorro", "Consuelo", "Molinos", "Danubio",
+            "Portal Usme",
+        ],
+    },
+    "J76": {
+        "name": "J76",
+        "stations": [
+            "Portal Usme", "Danubio", "Molinos", "Consuelo", "Socorro",
+            "Santa Lucia", "Calle 40 Sur", "Restrepo", "Avenida Jimenez",
+            "Universidades",
+        ],
+    },
+
+    "M83": {
+        "name": "M83",
+        "stations": [
+            "Portal Usme", "Danubio", "Consuelo", "Quiroga",
+            "Avenida 1 de Mayo", "Policarpa", "Bicentenario", "San Victorino",
+            "San Diego", "Museo Nacional",
+        ],
+    },
+    "H83": {
+        "name": "H83",
+        "stations": [
+            "Museo Nacional", "San Diego", "San Victorino", "Bicentenario",
+            "Policarpa", "Avenida 1 de Mayo", "Quiroga", "Consuelo",
+            "Danubio", "Portal Usme",
         ],
     },
 }

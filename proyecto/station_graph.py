@@ -23,15 +23,14 @@ stations_by_corridor = {
         "Avenida 68", "Carrera 53", "Carrera 47", "Escuela Militar", "Polo",
     ],
     "E": [
-        "La Castellana", "NQS Calle 75 - Zona M", "7 de Agosto",
+        "La Castellana", "NQS Calle 75 - Zona M", "Av Chile", "7 de Agosto",
         "Movistar Arena", "Campin - Universidad Antonio Narino",
         "Universidad Nacional", "Avenida El Dorado", "CAD", "Paloquemao",
         "Ricaurte",
     ],
     "F": [
-        "Tibanica - Primavera", "Los Laureles", "Islandia", "Portal Americas",
-        "Biblioteca Tintal", "Transversal 86", "Banderas", "Mandalay",
-        "Avenida Americas - Avenida Boyaca", "Marsella", "Pradera",
+        "Portal Americas", "Biblioteca Tintal", "Transversal 86", "Banderas",
+        "Mandalay", "Avenida Americas - Avenida Boyaca", "Marsella", "Pradera",
         "Distrito Grafiti", "Puente Aranda", "Carrera 43", "Zona Industrial",
         "CDS - Carrera 32", "Ricaurte", "San Facon - Carrera 22",
         "De La Sabana", "Avenida Jimenez",
@@ -39,13 +38,12 @@ stations_by_corridor = {
     "G": [
         "Comuneros", "Santa Isabel", "Calle 30 Sur", "Calle 38A Sur",
         "General Santander", "Alqueria", "Venecia", "Sevillana",
-        "Madelena", "Perdomo", "Portal Sur", "Bosa", "La Despensa",
-        "Leon XIII", "Terreros - Hospital Cardiovascular", "San Mateo",
+        "Madelena", "Perdomo", "Portal Sur",
     ],
     "H": [
         "Hortua", "Narino", "Fucha", "Restrepo", "Olaya", "Quiroga",
         "Calle 40 Sur", "Santa Lucia", "Socorro", "Consuelo", "Molinos",
-        "Danubio", "Portal Usme", "Biblioteca", "Parque", "Portal Tunal",
+        "Danubio", "Portal Usme",
     ],
     "J": [
         "San Victorino", "Museo del Oro",
@@ -67,6 +65,19 @@ stations_by_corridor = {
     "M": [
         "Museo Nacional",
     ],
+    "N": [
+        "Tygua - San Jose", "Guatoque - Veraguas",
+    ],
+    "S": [
+        "Bosa", "La Despensa", "Leon XIII",
+        "Terreros - Hospital Cardiovascular", "San Mateo",
+    ],
+    "T": [
+        "Biblioteca", "Parque", "Portal Tunal",
+    ],
+    "Z": [
+        "Islandia", "Los Laureles", "Tibanica - Primavera",
+    ],
 }
 
 inter_corridor_connections = [
@@ -82,7 +93,18 @@ inter_corridor_connections = [
     ("Museo Nacional", "Centro Memoria"),
     ("Calle 26", "Centro Memoria"),
     ("Ricaurte", "Comuneros"),
+    ("Santa Lucia", "Biblioteca"),
+    ("Biblioteca Tintal", "Islandia"),
+    ("Tygua - San Jose", "Hortua"),
+    ("Guatoque - Veraguas", "Comuneros"),
+    ("Tygua - San Jose", "Avenida Jimenez"),
+    ("Tygua - San Jose", "Bicentenario"),
+    ("Tygua - San Jose", "San Victorino"),
+    ("Perdomo", "Bosa"),
+    ("San Martin", "Polo"),
+    ("Avenida Jimenez", "San Victorino")
 ]
+
 
 
 class Graph:
@@ -118,7 +140,24 @@ class Graph:
         return distances
 
 
-EDGE_WEIGHT = 2
+EDGE_WEIGHT = 3
+
+edge_weight_overrides = {
+    frozenset({"Calle 72", "Polo"}): 6,
+    frozenset({"Calle 100", "La Castellana"}): 4,
+    frozenset({"Heroes", "Polo"}): 6,
+    frozenset({"NQS Calle 75 - Zona M", "San Martin"}): 5,
+    frozenset({"San Martin", "Polo"}): 7,
+    frozenset({"Avenida El Dorado", "Ciudad Universitaria - Loteria de Bogota"}): 7,
+    frozenset({"Avenida Jimenez", "San Victorino"}): 3,
+    frozenset({"Tygua - San Jose", "Bicentenario"}): 7,
+    frozenset({"La Castellana", "NQS Calle 75 - Zona M"}): 4,
+    frozenset({"Centro Memoria", "Universidades"}): 10,
+}
+
+
+def edge_weight(a, b):
+    return edge_weight_overrides.get(frozenset({a, b}), EDGE_WEIGHT)
 
 
 def build_graph():
@@ -126,10 +165,11 @@ def build_graph():
 
     for corridor, stations in stations_by_corridor.items():
         for i in range(len(stations) - 1):
-            graph.add_edge(stations[i], stations[i + 1], EDGE_WEIGHT)
+            a, b = stations[i], stations[i + 1]
+            graph.add_edge(a, b, edge_weight(a, b))
 
     for a, b in inter_corridor_connections:
-        graph.add_edge(a, b, EDGE_WEIGHT)
+        graph.add_edge(a, b, edge_weight(a, b))
 
     return graph
 

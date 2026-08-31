@@ -257,7 +257,7 @@ routes = {
         ],
     },
     "T13": {
-        "name": "F32",
+        "name": "T13",
         "stations": [
             "Portal Norte", "Calle 161", "Mazuren", "Calle 146", "Calle 142",
             "Calle 127", "Calle 106", "Calle 85", "Flores", "Calle 22",

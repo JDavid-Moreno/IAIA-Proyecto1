@@ -97,8 +97,8 @@ class Problem:
 
 FAIL = Node(None)
 TRAVEL_TIME = 3
-DWELL_TIME = 4
-TRANSFER_TIME = 5
+DWELL_TIME = 3
+TRANSFER_TIME = 7
 
 def expand(problem, node):
     state = node.state
